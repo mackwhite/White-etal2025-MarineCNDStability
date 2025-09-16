@@ -183,7 +183,7 @@ model_table_all <- performance::compare_performance(m1,m4,m5,m6,m7,m8,m9,m10)
 model_selection <- model_table_all |>
       mutate(dWAIC = WAIC - min(WAIC))
 
-write_csv(model_selection, "output/tables/brms-fullmodel-selection-table-roundone.csv")
+# write_csv(model_selection, "output/tables/brms-fullmodel-selection-table-roundone.csv")
 
 rm(list = setdiff(ls(), c("dat_ready", "pr", "palette", 'm4')))
 

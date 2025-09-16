@@ -4,10 +4,10 @@
 ###date(s): July 2024
 ###note(s): 
 ## Here, we calculate CND stability and community structure (e.g., evenness, richness) metrics
-## at the population, trophic, and community levels. Community level data is used in manuscript (starts on line XXX)
-## Population level calculations begin on line XXX
-## Trophic level calculations begin on line XXX
-## Community level calculations begin on line XXX
+## at the population, trophic, and community levels. Community level data is used in manuscript (starts on line 736)
+## Population level calculations begin on line 22
+## Trophic level calculations begin on line 378
+## Community level calculations begin on line 736
 ## Please - direct any questions to mackwhiteecology@gmail.com
 
 # Housekeeping ------------------------------------------------------------

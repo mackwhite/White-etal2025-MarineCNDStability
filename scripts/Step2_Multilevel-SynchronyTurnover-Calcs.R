@@ -5,8 +5,8 @@
 ###note(s): 
 ## Here, we calculate turnover and synchrony metrics at the population and trophic levels... 
 ## using the codyn package
-## Population level calculations begin on line XXX
-## Trophic level calculations begin on line XXX
+## Population level calculations begin on line 21
+## Trophic level calculations begin on line 393
 ## Please - direct any questions to mackwhiteecology@gmail.com
 
 # Housekeeping ------------------------------------------------------------
