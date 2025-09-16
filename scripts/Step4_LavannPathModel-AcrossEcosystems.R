@@ -1,8 +1,10 @@
 ###project: LTER Marine Consumer Nutrient Dynamic Synthesis Working Group
-###author(s): Mack White
-###goal(s): visualize scaled dsr relationships across various scales of organization
-###date(s): October 2024
+###author(s): MW & NL
+###goal(s): Conduct path analysis for across ecosystem drivers of CND stability
+###date(s): November 2024
 ###note(s):
+## Models originally ran in Python, but redone in R for consistency
+## with other wrangling, cleaning, modeling, and visualization scripts
 
 ###########################################################################
 # Housekeeping ------------------------------------------------------------
@@ -10,7 +12,6 @@
 
 ### load necessary libraries
 ### install.packages("librarian")
-# remotes::install_github('m-clark/mixedup')
 librarian::shelf(
       tidyverse,
       readxl,
@@ -79,3 +80,5 @@ path_model <- '
 
 fit <- sem(path_model, data = dat_ready)
 summary(fit, standardized = TRUE, fit.measures = TRUE, rsquare = TRUE)
+
+### visualization generated in MS PowerPoint using summary data here
