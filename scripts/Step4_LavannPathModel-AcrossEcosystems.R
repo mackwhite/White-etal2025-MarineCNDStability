@@ -12,12 +12,7 @@
 
 ### load necessary libraries
 ### install.packages("librarian")
-librarian::shelf(
-      tidyverse,
-      readxl,
-      readr,
-      lavaan
-)
+librarian::shelf(tidyverse, readxl, readr, lavaan)
 
 ### read in necessary data ---
 dat <- read_csv('local_data/dsr-eco-org-raw-all.csv') |>
@@ -79,6 +74,11 @@ path_model <- '
 '
 
 fit <- sem(path_model, data = dat_ready)
-summary(fit, standardized = TRUE, fit.measures = TRUE, rsquare = TRUE)
+summary(
+      fit,
+      standardized = TRUE,
+      fit.measures = TRUE,
+      rsquare = TRUE
+)
 
 ### visualization generated in MS PowerPoint using summary data here
