@@ -32,14 +32,14 @@ librarian::shelf(
 ### read in necessary data ---
 
 dat <- read_csv('local_data/dsr-eco-org-raw-all.csv') |>
-      rename(
+      dplyr::rename(
             Program = program,
             Trophic_Group = troph_group,
             Species = scientific_name,
             Habitat = habitat,
             Site = site
       ) |>
-      select(
+      dplyr::select(
             Program,
             Habitat,
             Site,
@@ -66,7 +66,7 @@ dat <- read_csv('local_data/dsr-eco-org-raw-all.csv') |>
       distinct()
 
 dat_scaled <- dat |>
-      select(Program, Habitat, Site, comm_n_stability, everything()) |>
+      dplyr::select(Program, Habitat, Site, comm_n_stability, everything()) |>
       mutate(comm_n_stability = scale(comm_n_stability)) |>
       group_by(Program) |>
       ## this is a function syntax
@@ -139,8 +139,8 @@ dat |>
             legend.title = element_text(face = "bold", color = "black"),
             strip.text = element_text(face = "bold", color = "black"))
 
-ggsave("output/figs/smf1.png", units = "in", width = 6,
-       height = 5, dpi =  600)
+# ggsave("output/figs/figure-one.png", units = "in", width = 6,
+#        height = 5, dpi =  600)
 
 ### stability ~ richness ----
 

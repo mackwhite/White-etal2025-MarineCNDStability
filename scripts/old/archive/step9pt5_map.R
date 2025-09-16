@@ -19,7 +19,7 @@ librarian::shelf(tidyverse, readr, scales, ggplot2, dataRetrieval, janitor, read
 
 
 ### read in necessary data ---
-map_dt <- read_csv("LTER_Site_Coords_w_information.csv") |> 
+map_dt <- read_csv("local_data/LTER_Site_Coords_w_information.csv") |> 
       filter(Site %in% c("FCE", "MCR", "SBC", "VCR")) |> 
       rename(program = Site,
              lat = Latitude,
@@ -47,7 +47,7 @@ world <- st_read('../../qgis/continent/world-continents.shp')
 glimpse(world)
 
 ### read in coordinates ----
-coords <- read_csv("LTER_Site_Coords_w_information.csv") |> 
+coords <- read_csv("local_data/LTER_Site_Coords_w_information.csv") |> 
       filter(Site %in% c("FCE", "MCR", "SBC", "VCR")) |> 
       rename(program = Site,
              y = Latitude,
@@ -98,5 +98,5 @@ all <- ggplot() +
       )
 
 all
-ggsave("output/figs/map08172025.png", units = "in", width = 5,
-       height = 5, dpi =  600)
+# ggsave("output/figs/sitemap.png", units = "in", width = 5,
+#        height = 5, dpi =  600)
