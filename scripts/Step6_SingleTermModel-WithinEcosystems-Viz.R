@@ -24,7 +24,6 @@ librarian::shelf(
       ggstats,
       brms,
       mixedup,
-      lterpalettefinder
 )
 
 ### read in model data ----

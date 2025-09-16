@@ -156,22 +156,6 @@ dt_mutate_1 <- no_fce_or_zeros |>
 
 dt_mutate_2 <- rbind(dt_mutate_1,dt_mutate_fce,m_zero_save,m2_zero_save)
 
-##########################################################################
-### coding with AC to get the max size of each species in the population
-### unique to step3 - we are not doing this for population or trophic levels
-# dt_mutate_3 <- dt_mutate_2 |> 
-#       group_by(project, habitat, year, month, site, subsite_level1,
-#                subsite_level2, subsite_level3, scientific_name) |>
-#       mutate(max_size = case_when(dmperind_g_ind != 0 ~ max(dmperind_g_ind),
-#                                   T ~ NA)) |> 
-#       ungroup()
-##########################################################################
-### here is where steps four-five begin to differ from steps one-three ---
-##########################################################################
-### summarize data at "finest" scale for each individual program (e.g.,
-### transect or bout) - LK updates at June meeting allow appropriate
-### resolution for PISCO datasets
-
 ### check for NAs
 na_count_per_column <- sapply(dt_mutate_2, function(x) sum(is.na(x)))
 print(na_count_per_column) 
