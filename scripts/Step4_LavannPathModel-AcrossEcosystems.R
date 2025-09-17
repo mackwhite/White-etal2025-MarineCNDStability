@@ -16,14 +16,14 @@ librarian::shelf(tidyverse, readxl, readr, lavaan)
 
 ### read in necessary data ---
 dat <- read_csv('local_data/dsr-eco-org-raw-all.csv') |>
-      rename(
+      dplyr::rename(
             Program = program,
             Trophic_Group = troph_group,
             Species = scientific_name,
             Habitat = habitat,
             Site = site
       ) |>
-      select(
+      dplyr::select(
             Program,
             Habitat,
             Site,
